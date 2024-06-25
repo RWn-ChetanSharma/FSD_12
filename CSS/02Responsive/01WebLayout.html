@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Layout</title>
+    <!-- Font Awesome CDN  -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Internal CSS  -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: 1px solid black;
+      }
+      h2>i{
+        color: palevioletred;
+        background-color: aliceblue;
+        padding: 20px;
+        font-size: 50px;
+      }
+      body {
+        background-color: thistle;
+      }
+      .container {
+        width: 90%;
+        margin: 0 auto;
+        background-color: burlywood;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: cadetblue;
+        text-align: center;
+        gap: 20px;
+      }
+      .col-50 {
+        width: 50%;
+        background-color: blueviolet;
+      }
+      .col-33 {
+        width: 33.33%;
+        background-color: salmon;
+      }
+      .col-25 {
+        width: 25%;
+        background-color: skyblue;
+      }
+      img {
+        width: 100%;
+      }
+      h2 {
+        font-size: 40px;
+      }
+      h2 + p {
+        font-size: 25px;
+      }
+
+      /* Media Query  */
+
+      @media (max-width: 1200px) {
+        .col-33,
+        .col-50 {
+          width: 48%;
+        }
+        .col-25 {
+          width: 32%;
+        }
+        .row {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .col-25,
+        .col-33,
+        .col-50 {
+          width: 48%;
+        }
+        .row {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .col-25,
+        .col-33,
+        .col-50 {
+          width: 100%;
+        }
+        .row {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .col-25,
+        .col-33,
+        .col-50 {
+          width: 100%;
+        }
+        .row {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- container -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <!-- col-50 -->
+        <div class="col-50">
+          <h2><i class="fa-brands fa-instagram"></i></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+            delectus unde. Laboriosam, fuga ex reiciendis, fugit unde
+            consequuntur accusamus quod hic expedita aut id officia esse,
+            tempore doloremque necessitatibus iusto?
+          </p>
+        </div>
+        <!-- col-50 -->
+        <div class="col-50"><img src="../../Images/leaf.avif" alt="" /></div>
+      </div>
+      <!-- row -->
+      <div class="row">
+        <!-- col-50 -->
+        <div class="col-33">
+          <h2>Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+            delectus unde. Laboriosam, fuga ex reiciendis, fugit unde
+            consequuntur accusamus quod hic expedita aut id officia esse,
+            tempore doloremque necessitatibus iusto?
+          </p>
+        </div>
+        <!-- col-50 -->
+        <div class="col-33"><img src="../../Images/leaf.avif" alt="" /></div>
+        <!-- col-50 -->
+        <div class="col-33">
+          <h2>Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+            delectus unde. Laboriosam, fuga ex reiciendis, fugit unde
+            consequuntur accusamus quod hic expedita aut id officia esse,
+            tempore doloremque necessitatibus iusto?
+          </p>
+        </div>
+      </div>
+      <!-- row -->
+      <div class="row">
+        <!-- col-50 -->
+        <div class="col-25">
+          <h2>Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+            delectus unde. Laboriosam, fuga ex reiciendis, fugit unde
+            consequuntur accusamus quod hic expedita aut id officia esse,
+            tempore doloremque necessitatibus iusto?
+          </p>
+        </div>
+        <!-- col-50 -->
+        <div class="col-25"><img src="../../Images/leaf.avif" alt="" /></div>
+        <!-- col-50 -->
+        <div class="col-25">
+          <h2>Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+            delectus unde. Laboriosam, fuga ex reiciendis, fugit unde
+            consequuntur accusamus quod hic expedita aut id officia esse,
+            tempore doloremque necessitatibus iusto?
+          </p>
+        </div>
+        <!-- col-50 -->
+        <div class="col-25"><img src="../../Images/leaf.avif" alt="" /></div>
+      </div>
+    </div>
+  </body>
+</html>
