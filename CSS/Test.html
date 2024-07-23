@@ -4,9 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github</title>
+
+    <style>
+      body{
+        background-color: thistle;
+      }
+
+      h1::before{
+        content: "~ ";
+        background-color: blueviolet;
+        color: aliceblue;
+
+      }
+      h1::after{
+        content: " !";
+      }
+      .box{
+        width: 200px;
+        height: 200px;
+        border: 2px solid lime;
+        background-color: blue;
+        animation-name: move;
+        animation-duration: 3s;
+        /* animation-delay: 2s; */
+        /* animation-iteration-count: 2; */
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+
+      }
+
+
+      @keyframes move {
+        from{
+          margin-left: 0px;
+          background-color: blue;
+        }
+        to{
+          margin-left: 800px;
+          border-radius: 50%;
+          background-color: brown;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>https://github.com/RWn-ChetanSharma/FSD_12</h1>
+    <h1>Heading</h1>
 
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14687.154002781392!2d72.4702585!3d23.0315366!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b3e4cd25609%3A0x6c0a96187d6d1b99!2sRed%20and%20White%20Multimedia%20Education%20-%20Bopal!5e0!3m2!1sen!2sin!4v1719214010665!5m2!1sen!2sin"
@@ -17,5 +60,7 @@
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
+    <hr>
+    <div class="box"></div>
   </body>
 </html>
