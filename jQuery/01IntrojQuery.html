@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+  </head>
+  <body>
+    <h1>jQuery</h1>
+    <p>
+      jQuery is a lightweight, "write less, do more", JavaScript library. The
+      purpose of jQuery is to make it much easier to use JavaScript on your
+      website. jQuery takes a lot of common tasks that require many lines of
+      JavaScript code to accomplish, and wraps them into methods that you can
+      call with a single line of code.
+    </p>
+    <button>Click</button>
+    <!-- jQuery CDN  -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      console.log(jQuery);
+      console.log($);
+
+      //   Syntax
+
+      // $(selector).Event(function () {
+      //     // code to be excecuted
+      // })
+
+      $(document).ready(function () {
+
+        console.log("ready!");
+        $("button").click(function () {  
+            $("body").css({ backgroundColor: "red", color: "white" });
+            console.log("Clicked");
+        })
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selector</title>
+</head>
+<body>
+    <button id="unique">Click Id</button>
+    <h1>jQuery Selector</h1>
+    <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, dolore.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, dolor?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, dolor?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, dolor?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, dolor?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, dolor?</p>
+     <!-- jQuery CDN  -->
+
+     <script
+     src="https://code.jquery.com/jquery-3.7.1.min.js"
+     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+     crossorigin="anonymous"
+   ></script>
+
+
+   <!-- Script  -->
+
+
+   <script>
+        $(document).ready(function () {
+            
+            // $(selector).Event(function () {
+                // code to be excecuted
+            // })
+
+
+            // Element Selector 
+
+            $("h1").click(function () {
+                console.log("Element Clicked");
+                
+            })
+
+
+            // Class Selector 
+
+            $(".para").click(function () {
+                console.log("class Clicked");
+                $("p").css({backgroundColor: "crimson", color: "white", fontSize: "30px"})
+                
+            })
+
+
+            // Id Selector 
+
+            $("#unique").click(function () {
+                console.log("Id Clicked");
+                $("h1").css({backgroundColor: "brown", color: "khaki", fontSize: "40px"})
+                
+            })
+
+
+
+
+        })
+   </script>
+</body>
+</html>
