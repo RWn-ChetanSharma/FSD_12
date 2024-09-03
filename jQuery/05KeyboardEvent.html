@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Keyboard Event</title>
+</head>
+<body>
+    <h1>jQuery Keyboard Event</h1>
+
+    <div class="box">
+
+    </div>
+    <hr>
+    <input type="text" id="inp">
+
+       <!-- jQuery CDN  -->
+
+       <script
+       src="https://code.jquery.com/jquery-3.7.1.min.js"
+       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+       crossorigin="anonymous"
+     ></script>
+
+
+     <!-- Script CSS -->
+
+
+     <script>
+        $("body").css({backgroundColor: "grey", color: "white", textAlign: "center"})
+        $(".box").css({backgroundColor: "crimson", width: "100%", height: "500px"})
+        $("#inp").css({backgroundColor: "teal", color: "khaki", width: "50%", height: "50px", fontSize: "30px"})
+     </script>
+
+     <!-- Script jquery  -->
+
+     <script>
+        $(document).ready(function () {
+            
+            // keydown
+
+            $("#inp").keydown(function () {
+                $(".box").css({backgroundColor: "green"})
+            })
+
+            // keyup
+
+            $("#inp").keyup(function () {
+                $(".box").css({backgroundColor: "orange"})
+            })
+
+
+            // // keypress
+
+            // $("#inp").keypress(function () {
+            //     $(".box").css({backgroundColor: "black"})
+            // })
+
+
+
+
+
+        })
+     </script>
+</body>
+</html>
