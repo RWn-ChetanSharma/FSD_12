@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide jQuery</title>
+
+    <!-- Internal CSS  -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Slide jQuery</h1>
+
+    <div class="box">Hey, I'm a Box</div>
+
+    <button id="btnSlideUp">Slide Up</button>
+    <button id="btnSlideDown">Slide Down</button>
+    <button id="btnSlideToggle">Slide Toggle</button>
+
+    <!-- jQuery CDN  -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!-- script css  -->
+
+    <script>
+        $("body").css({backgroundColor: "grey", textAlign: "center"})
+        $("h1").css({fontSize: "50px", padding: "20px 0px"})
+        $(".box").css({backgroundColor: "crimson", border: "3px solid lime", margin: "20px 0px",fontSize: "50px" , height: "300px"})
+        $("button").css({backgroundColor: "blue", color: "white", padding: "10px 30px", fontSize: "30px"})
+    </script>
+
+    <!-- script jquery -->
+
+
+    <script>
+
+        $(document).ready(function () {
+            
+            // slideUp
+
+            $("#btnSlideUp").click(function () {
+                $(".box").slideUp("hey");
+            })
+
+            // slideDown
+
+            $("#btnSlideDown").click(function () {
+                $(".box").slideDown("hey");
+            })
+
+            // slideToggle
+
+            $("#btnSlideToggle").click(function () {
+                $(".box").slideToggle("hey");
+            })
+
+
+
+        })
+    </script>
+  </body>
+</html>

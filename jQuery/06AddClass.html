@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Class jQuery</title>
+
+    <!-- Internal CSS  -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+
+      }
+      h1 {
+        font-size: 50px;
+        padding: 20px 0px;
+      }
+      .box {
+        height: 200px;
+        border: 2px solid lime;
+        font-size: 50px;
+        margin: 20px 0px;
+      }
+      body {
+        background-color: grey;
+      }
+      .hey{
+        background-color: crimson;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add Class jQuery</h1>
+
+    <div class="box">Hey, I'm a Box</div>
+
+    <button id="btnAdd">Add Class</button>
+    <button id="btnRemove">Remove Class</button>
+    <button id="btnToggle">Toggle Class</button>
+
+    <!-- jQuery CDN  -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!-- script css  -->
+
+    <script>
+           $("button").css({backgroundColor: "blue", color: "white", padding: "10px 30px", fontSize: "30px"})
+    </script>
+
+    <!-- script jquery -->
+
+
+    <script>
+
+        $(document).ready(function () {
+            
+            // Add Class 
+
+            $("#btnAdd").dblclick(function () {
+                $(".box").addClass("hey");
+            })
+
+            // Remove Class 
+
+            $("#btnRemove").click(function () {
+                $(".box").removeClass("hey");
+            })
+
+            // Toggle Class 
+
+            $("#btnToggle").click(function () {
+                $(".box").toggleClass("hey");
+            })
+
+
+
+        })
+    </script>
+  </body>
+</html>
