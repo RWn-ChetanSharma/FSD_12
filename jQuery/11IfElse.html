@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Click</button>
+
+    <!-- jQuery CDN  -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // jQuery CSS
+
+      $("body").css({ backgroundColor: "grey" });
+      $("button").css({
+        backgroundColor: "blue",
+        color: "white",
+        padding: "10px 30px",
+        fontSize: "25px",
+      });
+      $("h1").css({
+        backgroundColor: "brown",
+        color: "khaki",
+        fontSize: "45px",
+      });
+
+      $(document).ready(function () {
+        let a = 1;
+        $("#btn").click(function () {
+          if (a == 0) {
+            $("body").css({ backgroundColor: "red" });
+          } else {
+            $("body").css({ backgroundColor: "green" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
