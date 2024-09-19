@@ -6,7 +6,7 @@
     <title>Chart In jQuery</title>
     <style>
         .box{
-            width: 500px;
+            width: 50%;
             height: 500px;
             margin: auto;
         }
@@ -36,7 +36,12 @@
       // ctx.style.backgroundColor = 'brown'
 
       new Chart(ctx, {
-        type: "polarArea",
+        // type: "polarArea",
+        // type: "bar",
+        // type: "bubble",
+        // type: "doughnut",
+        type: "line",
+        type: "radar",
         data: {
           labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
           datasets: [
