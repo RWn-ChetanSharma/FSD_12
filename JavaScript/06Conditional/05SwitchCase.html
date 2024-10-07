@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <h1>Switch Case</h1>
+
+
+    <script>
+        let inputUser = prompt("For English Press '1' and for Hindi Press '2'.") 
+        console.log(parseInt(inputUser));
+        console.log(typeof parseInt(inputUser));
+        // console.log(inputUser);
+        // console.log(typeof inputUser);
+        
+        // let inputUser = 3
+
+        switch (parseInt(inputUser)) {
+            // switch (inputUser) {
+            case 1:
+            // case '1':
+                alert("Thanks For Choosing English.")
+                console.log("one");
+                
+                break;
+            case 2:
+            // case '2':
+                alert("हिंदी चुनने के लिए धन्यवाद.")
+                break;
+        
+            default:
+                alert("Choose From 1 and 2.")
+            
+        }
+    </script>
+</body>
+</html>
