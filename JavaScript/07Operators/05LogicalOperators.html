@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Operators</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      body {
+        background-color: tan;
+      }
+      h1 {
+        background-color: crimson;
+        color: aliceblue;
+        font-size: 60px;
+        padding: 30px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Logical operators</h1>
+    <img src="../../Images/Logical-Operators-in-JavaScript.jpg" alt="" />
+
+    <script>
+      // &&
+
+      // Both condition must be right
+
+      let a = 7;
+
+      if (a > 0 && a < 10) {
+        console.log("a is greater than Zero and less than Ten.");
+      } else {
+        console.log("err");
+      }
+
+      // ||
+
+      // One of them must be right
+
+      let x = 15;
+
+      if (x == 5 || x == 15) {
+        console.log("a is either equal to Five or Fifteen");
+      } else {
+        console.log("err");
+      }
+
+      // !
+
+      if (!(x == 5 || x == 15)) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    </script>
+  </body>
+</html>
