@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get HTML Elements</title>
+  </head>
+  <body style="background-color: grey">
+    <h1>Get HTML Elements</h1>
+
+    First :
+    <input
+      type="text"
+      name="inpData1"
+      id="inpData1"
+      class="same"
+      value="anything"
+    />
+    <br /><br />
+    Second :
+    <input
+      type="text"
+      name="inpData2"
+      id="inpData2"
+      class="same"
+      value="Second"
+    />
+    <br /><br />
+    Third :
+    <input
+      type="text"
+      name="inpData3"
+      id="inpData3"
+      class="same"
+      value="Third"
+    />
+    <br /><br />
+    Fourth :
+    <input
+      type="text"
+      name="inpData4"
+      id="inpData4"
+      class="same"
+      value="Fourth"
+    />
+    <br /><br />
+    Fifth :
+    <input
+      type="text"
+      name="inpData5"
+      id="inpData5"
+      class="same"
+      value="Fifth"
+    />
+    <br /><br />
+    Sixth :
+    <input
+      type="text"
+      name="inpData6"
+      id="inpData6"
+      class="same"
+      value="Sixth"
+    />
+
+    <script>
+      // 1. getElementById
+
+      //   let inpData1 = document.getElementById("inpData1");
+      //   let inpData1 = document.getElementById("inpData1").value;
+      //   console.log(inpData1);
+      //   console.log(inpData1.value);
+
+      // 2. getElementById
+
+      //   let inpData = document.getElementsByClassName("same");
+      //   console.log(inpData);
+      //   console.log(inpData[0]);
+      //   console.log(inpData[1].value);
+      //   console.log(inpData[3]);
+
+      // 3. getElementsByName
+
+      //   let inpData = document.getElementsByName("inpData1");
+      //   console.log(inpData);
+      //   console.log(inpData[0]);
+      //   console.log(inpData[0].value);
+
+      // 4. getElementsByTagName
+
+      //   let inpData = document.getElementsByTagName("input");
+      //   console.log(inpData);
+      //   console.log(inpData[0]);
+      //   console.log(inpData[1].value);
+      //   console.log(inpData[3]);
+
+      // 5. querySelector
+
+      //   let inpData = document.querySelector("input");
+      //   console.log(inpData);
+      //   console.log(inpData.value);
+
+      // 6. querySelector
+
+      let inpData = document.querySelectorAll("input");
+      console.log(inpData);
+      console.log(inpData[0]);
+        console.log(inpData[1].value);
+        console.log(inpData[3]);
+    </script>
+  </body>
+</html>
