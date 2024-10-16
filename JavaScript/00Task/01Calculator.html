@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator in JS</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+      input {
+        height: 30px;
+      }
+      .box {
+        border: 1px solid black;
+        width: 50%;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        font-size: 30px;
+        background-color: crimson;
+        color: aliceblue;
+      }
+      #result {
+        border: 2px solid lime;
+        background-color: black;
+        color: aliceblue;
+        width: 20%;
+        margin: 10px auto;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator in JS</h1>
+    <div class="box">
+      first Number : <input type="number" name="inp1" id="inp1" /> <br /><br />
+      Second Number : <input type="number" name="inp2" id="inp2" /> <br /><br />
+      <button onclick="add()">+</button>
+      <button onclick="sub()">-</button>
+      <button onclick="multiply()">*</button>
+      <button onclick="devide()">/</button>
+      <br /><br />
+      <div id="result"></div>
+    </div>
+
+    <script>
+      let inp1 = document.getElementById("inp1");
+      let inp2 = document.getElementById("inp2");
+      let result = document.getElementById("result");
+
+      function add() {
+        let res = parseInt(inp1.value) + parseInt(inp2.value);
+        console.log(res);
+        result.innerHTML = res;
+      }
+      function sub() {
+        let res = parseInt(inp1.value) - parseInt(inp2.value);
+        console.log(res);
+        result.innerHTML = res;
+      }
+      function multiply() {
+        let res = parseInt(inp1.value) * parseInt(inp2.value);
+        console.log(res);
+        result.innerHTML = res;
+      }
+      function devide() {
+        let res = parseInt(inp1.value) / parseInt(inp2.value);
+        console.log(res);
+        result.innerHTML = res;
+      }
+    </script>
+  </body>
+</html>
