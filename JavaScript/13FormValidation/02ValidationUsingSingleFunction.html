@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      body {
+        color: aliceblue;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form Validation Using Single Function</h1>
+
+    <input
+      type="text"
+      name="userName"
+      id="userName"
+      onblur="handleValidation(this, 'error1', 'User Name')"
+    />
+    <span id="error1"></span>
+    <br /><br />
+    <input
+      type="email"
+      name="userEmail"
+      id="userEmail"
+      onblur="handleValidation(this, 'error2', 'User Email')"
+    />
+    <span id="error2"></span>
+    <br /><br />
+    <input
+      type="password"
+      name="userPass"
+      id="userPass"
+      onblur="handleValidation(this, 'error3', 'User Password')"
+    />
+    <span id="error3"></span>
+    <br /><br />
+
+    <script>
+
+      function handleValidation(e, spnId, msg) {
+        if (e.value == "") {
+          document.getElementById(spnId).innerHTML =
+            "Please Fill " + msg;
+          document.getElementById(spnId).style.color = "red";
+        } else {
+          document.getElementById(spnId).innerHTML = "";
+        }
+      }
+      
+    </script>
+  </body>
+</html>

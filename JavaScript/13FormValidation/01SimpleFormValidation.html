@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Form Validation</title>
+    <style>
+      body {
+        color: aliceblue;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Form Validation</h1>
+
+    <input
+      type="text"
+      name="userName"
+      id="userName"
+      onblur="handleNameValidation()"
+    />
+    <span id="error1"></span>
+    <br /><br />
+    <input
+      type="email"
+      name="userEmail"
+      id="userEmail"
+      onblur="handleEmailValidation()"
+    />
+    <span id="error2"></span>
+    <br /><br />
+    <input
+      type="password"
+      name="userPass"
+      id="userPass"
+      onblur="handlePasswordValidation()"
+    />
+    <span id="error3"></span>
+    <br /><br />
+
+    <script>
+      let userName = document.getElementById("userName");
+      let userEmail = document.getElementById("userEmail");
+      let userPass = document.getElementById("userPass");
+
+      function handleNameValidation() {
+        if (userName.value == "") {
+          //   console.log("Field Is Empty");
+          document.getElementById("error1").innerHTML =
+            "Please Fill User Name";
+          document.getElementById("error1").style.color = "red";
+        } else {
+          document.getElementById("error1").innerHTML = "";
+          //   console.log("Field Contain Some Text");
+        }
+      }
+      function handleEmailValidation() {
+        if (userEmail.value == "") {
+          document.getElementById("error2").innerHTML =
+            "Please Fill User Email";
+          document.getElementById("error2").style.color = "red";
+        } else {
+          document.getElementById("error2").innerHTML = "";
+        }
+      }
+      function handlePasswordValidation() {
+        if (userPass.value == "") {
+          document.getElementById("error3").innerHTML =
+            "Please Fill User Password";
+          document.getElementById("error3").style.color = "red";
+        } else {
+          document.getElementById("error3").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>
