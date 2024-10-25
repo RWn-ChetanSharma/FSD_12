@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onInput</title>
+    <style>
+      label {
+        position: absolute;
+        top: 10px;
+        left: 6px;
+        font-size: 12px;
+        font-weight: lighter;
+        color: dimgray;
+      }
+      .col {
+        position: relative;
+      }
+      input {
+        font-size: 15px;
+        padding: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col">
+      <label for="inpData" id="inpLabel">User Name</label>
+      <input
+        type="text"
+        id="inpData"
+        oninput="handleValidation(this, 'error')"
+      />
+      <span id="error"></span>
+    </div>
+
+    <script>
+      let inpLabel = document.getElementById("inpLabel");
+
+      function handleValidation(e, spnId) {
+        if (e.value == "") {
+          inpLabel.style.top = "10px";
+          inpLabel.style.left = "6px";
+          console.log("Empty");
+        } else {
+            inpLabel.style.top = "-2px";
+            //   inpLabel.style.fontSize = "10px";
+            inpLabel.style.left = "6px";
+          console.log("Filled");
+        }
+      }
+    </script>
+  </body>
+</html>
